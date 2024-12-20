@@ -1,12 +1,14 @@
 const express = require('express');
-const User = require('../models/User');
 const router = express.Router();
-const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { body, validationResult } = require('express-validator');
+
+const User = require('../models/User');
 const fetchuser = require('../middleware/fetchuser')
 
 const JWT_SECRET = "rahulisgood$";
+
 
 // ROUTE 1: Create a user using: POST "/api/auth/createuser"
 router.post('/createuser', [
@@ -55,6 +57,7 @@ router.post('/createuser', [
     }
 });
 
+
 //ROUTE 2: Authenticate a user using POST "/api/auth/login"
 router.post('/login', [
     body('email', 'Enter a valid email').isEmail(),
@@ -98,8 +101,8 @@ router.post('/login', [
     }
 });
 
-//Route 3: Get loggedin user Details using: POST "/api/auth/getuser". login required
 
+//Route 3: Get loggedin user Details using: POST "/api/auth/getuser". login required
 router.post('/getuser',fetchuser, async(req,res) =>{
     try{
         userId = req.user.id;
