@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import {Home} from "./components/Home";
 import About from "./components/About";
 import NoteState from "./context/notes/NoteState";
+import {Alerts} from "./components/Alerts";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <NoteState>
         <Router>
         <Navbar/>
+            <Alerts message={"This is amazing react course"}/>
             <div className="container">
             <Routes>
                 <Route exact path="/" element ={<Home/>}/>

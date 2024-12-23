@@ -8,10 +8,11 @@ const Noteitem = (props)=>{
             <div className="card my-3">
                <div className="card-body">
                     <h5 className="card-title">{note.title}</h5>
-                    <p className="card-text">{note.description}
-                        If the warning is not critical and you're okay with Git handling line endings automatically, you can proceed without any changes. However, aligning on a line-ending strategy helps avoid unnecessary diffs and issues when working in teams.
-                    </p>
-                   </div>
+                   <p className="card-text">{note.description}
+                       <i className="fa-regular fa-trash-can mx-2 my-3"></i>
+                       <i className="fa-solid fa-pen-to-square mx-2 my-3"></i>
+                   </p>
+               </div>
             </div>
         </div>
     )
