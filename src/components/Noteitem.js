@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import Notes from "./Notes";
+
 import noteContext from "../context/notes/noteContext";
 
 const Noteitem = (props) => {
   const context = useContext(noteContext);
   const { deleteNote } = context;
-  const { note } = props;
+  const { note, updateNote } = props;
 
   return (
     <div className="col-md-3">
@@ -22,7 +22,7 @@ const Noteitem = (props) => {
                 style={{ color: "red" }}
               ></i>
               <i
-                className="fa-solid fa-pen-to-square mx-2"
+                className="fa-solid fa-pen-to-square mx-2" onClick={updateNote}
                 style={{ color: "blue" }}
               ></i>
             </span>
