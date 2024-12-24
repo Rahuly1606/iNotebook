@@ -16,14 +16,14 @@ import AddNote from "./AddNote";
 
      const updateNote = (currentNote)=>{
         ref.current.click();
-        setNote({etitle: currentNote.title, edescription: currentNote.description, etag: currentNote.tag})
+        setNote({etitle: currentNote.title, edescription : currentNote.description, etag: currentNote.tag})
 
      }
 
 
        const handleclick = (e)=>{
-           console.log("updating note",note)
-        e.preventDefault();
+           console.log("updating note..",note)
+           e.preventDefault();
     }
 
     const onChange = (e)=>{

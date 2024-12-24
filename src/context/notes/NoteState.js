@@ -7,6 +7,7 @@ const NoteState = (props) => {
         const [notes,setNotes] = useState(notesInitial)
 
 
+
     //Get all notes
   const getNote = async ()=>{
       //API Call
@@ -39,6 +40,7 @@ const NoteState = (props) => {
     setNotes(notes.concat(note))
   }
 
+
   //Delete a Note
   const deleteNote = async (id)=>{
   //TODO: API CALL
@@ -56,6 +58,7 @@ const NoteState = (props) => {
     setNotes(newNotes)
 
   }
+  
 
   // Edit a Note
  const editNote = async (id, title,description,tag)=> {

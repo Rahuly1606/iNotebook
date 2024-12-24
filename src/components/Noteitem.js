@@ -22,7 +22,7 @@ const Noteitem = (props) => {
                 style={{ color: "red" }}
               ></i>
               <i
-                className="fa-solid fa-pen-to-square mx-2" onClick={updateNote}
+                className="fa-solid fa-pen-to-square mx-2" onClick={()=>{updateNote(note)}}
                 style={{ color: "blue" }}
               ></i>
             </span>
